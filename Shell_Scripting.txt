@@ -1,0 +1,136 @@
+Based on the commands and explanations provided, it seems like you're using a Unix-like operating system (possibly Linux) and you're interacting with a shell environment, likely Bash.
+
+Let's break down the commands and concepts:
+
+1. `echo $0`: This command prints the name of the shell you're currently using.
+
+2. `cat /etc/shells`: This command lists different types of shells available on your system.
+
+3. `pwd`: This command prints the current working directory.
+
+4. SHEBANG (`#!`): It's used at the beginning of scripts to specify the interpreter to be used for execution.
+
+5. `vim`: A text editor, stands for "Vi IMproved".
+
+6. Double square brackets `[[ ... ]]`: An enhanced version of single square brackets `[ ... ]` commonly used in conditional statements in Bash scripting.
+
+7. `==` for strings, `-eq` for numbers: Comparison operators in Bash scripting.
+
+8. `cat`: Command to concatenate and display files.
+
+9. `IFS`: Internal Field Separator, used to split strings into fields.
+
+10. `sleep`: Command to create a delay between executions.
+
+11. `exit`: Command to exit from a script or shell.
+
+12. Exit status: `$?` gives the exit status of the previous command.
+
+13. `basename`: Strips directory information and returns only the filename.
+
+14. `dirname`: Strips the filename and returns the directory path.
+
+15. `realpath`: Command to get the full path of a file.
+
+16. `>` and `>>`: Redirection operators in Bash for output to files, `>` overwrites while `>>` appends.
+
+17. `&> /dev/null`: Redirects both standard output and standard error to `/dev/null`, discarding the output.
+
+18. `set -x`: Enables debugging mode in a shell script.
+
+19. `set -e`: Causes the script to exit if any command fails.
+
+20. `nohup`: Command to run a command immune to hangups, with output to a non-tty.
+
+21. `at`: Command to schedule jobs for later execution.
+
+22. `cron`: A time-based job scheduler in Unix-like operating systems.
+
+23. `crontab`: Command to manipulate the cron table.
+
+24. `free`: Command to display amount of free and used memory in the system.
+
+25. `df`: Command to display disk space usage.
+
+26. `awk`: A versatile programming language mainly used for pattern scanning and processing.
+
+27. `grep`: Command-line utility for searching plain-text data sets for lines that match a regular expression.
+
+28. `tr`: Command to translate or delete characters.
+
+Based on these commands, it's likely you're using a Unix-like operating system such as Linux, and your default shell might be Bash.
+
+### Shell Commands and Concepts:
+
+- **Shell Type**: 
+  - To find out your shell type: `echo $0`
+
+- **Available Shells**:
+  - To see different types of shells in your OS: `cat /etc/shells`
+
+- **Print Working Directory**:
+  - To print the current working directory: `pwd`
+
+- **SHEBANG**: 
+  - Symbol: `#!`
+  - Usage: Used at the beginning of scripts to specify the interpreter to be used for execution.
+
+- **Vim**: 
+  - Definition: "Vi IMproved" (vi stands for visual editor)
+
+- **Conditional Statements**:
+  - Double Square Brackets: `[[ ... ]]` (enhanced version)
+  - Operators: 
+    - For numbers: `-eq`
+    - For strings: `==`
+
+- **Handling File Paths**:
+  - Usage: If there are spaces in the path of the file, use `"$file_path_variable"` (enclose in double quotes).
+
+- **Basic Commands**:
+  - `cat`: Concatenate files
+  - `sleep`: Create delay between two executions (e.g., `sleep 1s/1m`)
+  - `exit`: Stop script at a point
+  - `exit status`: `$?` (gives status of previous command if it was successful)
+
+- **File Path Manipulation**:
+  - `basename`: Strip directory info and only give filename
+  - `dirname`: Strip the filename and give directory path
+  - `realpath`: Get full path for a file (e.g., `realpath filename.txt`)
+
+- **Redirection**:
+  - `>`: Overwrites a file
+  - `>>`: Appends to a file
+  - `&> /dev/null`: Redirects output to null device
+
+- **Debugging**:
+  - `set -x`: Enable debugging mode
+  - `set -e`: Exit script if a command fails
+
+- **nohup**: 
+  - Command to run a command immune to hangups
+
+- **Automation with `at` Command**:
+  - Scheduling jobs:
+    - `at 00:00 4 August 2024`: Schedule jobs
+    - `atq`: List all scheduled jobs
+    - `atrm ID`: Remove scheduled jobs
+
+- **Cron Jobs**:
+  - Listing jobs: `crontab -l`
+  - Editing jobs: `crontab -e`
+
+- **Memory Usage**:
+  - `free`: Show RAM status
+  - Flags: 
+    - `-h`: Human readable
+    - `-mt`: Megabyte total
+  - Filtering and processing:
+    - `free -mt | grep "Total" | awk '{print $4}'`
+
+- **Disk Usage**:
+  - `df`: Display disk space usage
+  - Filtering and processing:
+    - `df -H | egrep -v "Filesystem|tmpfs|none|snapfuse" | grep "C:" | awk '{print $5}' | tr -d %`
+
+This structured format helps in quickly understanding and referring to the various commands and concepts mentioned.
